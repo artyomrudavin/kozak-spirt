@@ -138,6 +138,56 @@
 	// 				p
 	// 					font-size: rem(20)
 
+
+	.catalog
+		padding-top: rem(50)
+		padding-bottom: rem(50)
+		.container
+			.title__block
+				.title__line
+					h2
+						font-size: rem(50)
+						.kozak
+							font-size: rem(70)
+			.cat__block
+				margin-bottom: rem(50)
+				.cat__item
+					.cat__wrapper
+						padding: rem(20) rem(40)
+						// width: 75%
+						.cat__inner
+							.h4
+								.kozak
+									font-size: rem(32)
+							.cat__price
+								margin-bottom: rem(20)
+								strong
+									font-size: 36px
+			.gifts__block
+				.gift__item
+					.wrap
+						height: rem(300)
+						width: rem(300)
+						.gift__text
+							padding: rem(80) rem(20) rem(20)
+							h2
+								line-height: rem(40)
+								font-size: 38px
+								padding-bottom: rem(20)
+							p
+								font-size: 20px
+				.left
+					justify-content: flex-end
+				.right
+					justify-content: flex-start
+			.cat__stoim
+				.col-12
+					p
+						font-size: 28px
+						padding-top: rem(40)
+
+	// Catalog End
+
 	// .video
 	// 	.container-fluid
 	// 		.row
@@ -190,7 +240,7 @@
 					.sup-form
 						.price-block
 							.price
-								font-size: rem(24)
+								font-size: rem(18)
 							.main-btn
 								.btn
 									font-size: rem(18)
@@ -358,7 +408,11 @@
 					.main-form
 						.price-block
 							.price
-								font-size: rem(40)
+								font-size: rem(28)
+								.oldprice
+									font-size: rem(28)
+								.newprice
+									font-size: rem(40)
 							.main-btn
 								.btn
 									font-size: rem(20)
@@ -370,15 +424,15 @@
 					.sup-form
 						.price-block
 							.price
-								font-size: rem(36)
+								font-size: rem(28)
 							.main-btn
 								.btn
 									font-size: rem(22)
 									background-image: none
 
 	.cover
-		height: rem(900)
-		background: url(../img/cover-1.jpg) 50% 100% no-repeat
+		// height: rem(900)
+		// background: url(../img/cover-1.jpg) 50% 100% no-repeat
 		.container
 			.row
 				.col-12
@@ -397,7 +451,7 @@
 						font-size: rem(26)
 						line-height: inherit
 						.sale, .sale span
-							font-size: rem(52)
+							font-size: rem(64)
 
 	.video-recept
 		padding: rem(30)
@@ -487,7 +541,7 @@
 							font-size: rem(30)
 							line-height: rem(30)
 						.sale, .sale span
-							font-size: rem(60)
+							font-size: rem(120)
 					.mobile-img
 						display: none
 					.main-form
@@ -521,7 +575,7 @@
 
 	.description
 		height: rem(700)
-		background: url(../img/banki-1.jpg) 50% 50%/cover no-repeat
+		background: url(../img/banki-2.png) 50% 50% no-repeat #f5f5f5
 		.container
 			.row
 				.col-12
@@ -533,18 +587,12 @@
 		.des-mobile-img
 			display: none
 
-	// .cover
-	// 	height: rem(900)
-	// 	background: url(../img/cover-1.jpg) 50% 100% no-repeat
-	// 	.container
-	// 		.row
-	// 			.col-12
-	// 				h2
-	// 					font-size: rem(50)
-	// 					margin-top: rem(40)
-	// 					margin-bottom: rem(20)
-	// 				p
-	// 					font-size: rem(20)
+	.cover
+		.container
+			.title
+				.col-12
+					p
+						font-size: rem(36)
 
 	.video
 		.container-fluid
@@ -554,7 +602,7 @@
 						font-size: rem(32)
 						line-height: inherit
 						.sale, .sale span
-							font-size: rem(64)
+							font-size: rem(74)
 
 	.scheme
 		padding: rem(70)
@@ -565,7 +613,7 @@
 						font-size: rem(50)
 						margin-bottom: rem(50)
 						.sale, .sale span
-							font-size: rem(64)
+							font-size: rem(74)
 			.fon
 				.all-text
 					ul
@@ -662,22 +710,18 @@
 							font-size: rem(64)
 
 	.functions
-		padding: rem(40)
+		// padding: rem(30)
 		.container
-			.row
+			.func-houw
 				margin-bottom: rem(20)
 				h2
-					font-size: rem(50)
+					font-size: rem(42)
 					margin-bottom: rem(40)
 					.sale, .sale span
-						font-size: rem(64)
+						font-size: rem(104)
 				p
-					font-size: rem(20)
+					font-size: rem(24)
 					margin: 0 0 rem(40) 0
-				.pc-bottom-modern
-					display: block
-				.mob-bottom-modern
-					display: none
 				.row
 					.col-md-6
 						font-size: rem(15)
@@ -691,6 +735,20 @@
 								height: rem(180)
 								img
 									margin: 0 auto rem(10) auto
+			// .func-diagram
+			// 	.pc-bottom-modern
+			// 		display: block
+			// 	.mob-bottom-modern
+			// 		display: none
+
+	.function-diagram
+		.container
+			.col-12
+				.pc-bottom-modern
+					display: block
+				.mob-bottom-modern
+					display: none
+
 
 	.zavod
 		padding: rem(50)
@@ -705,7 +763,7 @@
 						font-size: rem(50)
 						margin-bottom: rem(40)
 						.sale, .sale span
-							font-size: rem(64)
+							font-size: rem(104)
 					p
 						font-size: rem(22)
 
@@ -786,7 +844,7 @@
 +media-breakpoint-up(xxl)
 
 	.main
-		background: url(../img/main3.jpg) center center/cover no-repeat
+		background: url(../img/main3.jpg) 50% 0 no-repeat
 		.container
 			.row
 				.main-header

@@ -57,6 +57,9 @@ textarea
 	&.img-width
 		width: 100%
 
+.kozak
+	font-family: ancientkyiv
+
 .text-center
 	text-align: center
 
@@ -179,6 +182,7 @@ header
 				.logo
 					flex: 1 0 auto
 					margin-top: rem(10)
+					line-height: initial
 					img
 						width: rem(160)
 					p
@@ -222,6 +226,10 @@ header
 						font-size: rem(16)
 						line-height: rem(20)
 						font-weight: bold
+			.video-order
+				display: flex
+				flex-direction: column
+				justify-content: flex-end
 			.main-order
 				h1
 					text-align: center
@@ -229,7 +237,7 @@ header
 					span
 						font-size: rem(22)
 					.sale, .sale span
-						font-family: bernier
+						font-family: ancientkyiv
 						font-size: rem(36)
 						font-weight: normal
 						line-height: normal
@@ -241,7 +249,7 @@ header
 					background: rgba(255, 255, 255, 0.75)
 					border-radius: rem(20)
 					padding: rem(20)
-					margin-bottom: rem(16)
+					// margin-bottom: rem(16)
 					border-radius: rem(10)
 					border: 1px solid rgba(0,0,0,0.15)
 					.cta
@@ -269,18 +277,29 @@ header
 							text-align: center
 							line-height: normal
 						.col-4
+							p
+								color: red
+								line-height: initial
+								margin-top: rem(10)
 							.gift
 								margin: 0 auto
 								max-width: 100%
 					.price-block
 						margin-bottom: rem(20)
 						.price
-							font-size: rem(50)
-							text-align: center
-							color: #CA1020
 							height: rem(50)
 							line-height: rem(50)
+							text-align: center
 							margin-bottom: rem(10)
+							font-size: rem(36)
+							color: #CA1020
+							.oldprice
+								font-size: rem(36)
+								text-decoration: line-through
+								text-decoration-color: #000
+								color: #444
+							.newprice
+								font-size: rem(50)
 						.main-btn
 							.btn
 								background: #008D37 url(../img/shoping.png) rem(24) center / rem(24) rem(24) no-repeat
@@ -334,10 +353,10 @@ header
 // Description End
 
 .cover
-	height: rem(500)
-	background: url(../img/cover-0.jpg) 50% 70% no-repeat
+	// height: rem(500)
+	// background: url(../img/cover-0.jpg) 50% 70% no-repeat
 	.container
-		.row
+		.title
 			.col-12
 				h2
 					font-size: rem(28)
@@ -348,13 +367,193 @@ header
 					font-weight: normal
 					color: #CA1020
 				p
-					font-size: rem(16)
+					font-size: rem(20)
 					text-align: center
+					color: #555
+		.cover-main
+			.col-md-6
+				margin-bottom: rem(60)
+				p
+					text-align: center
+					color: #000
+					padding-bottom: rem(32)
+		.cover-footer
+			p
+				font-size: rem(30)
+				text-align: center
+				margin-bottom: rem(32)
+				color: #000
+				font-weight: bold
+				width: 100%
 
 // Cover End
 
+.timer
+	display: flex
+	justify-content: center
+	font-size: rem(26)
+	font-weight: bold
+	text-align: center
+	margin-bottom: rem(20)
+	#days1, #hours1, #minutes1, #seconds1
+		min-width: rem(32)
+		.delimiter
+			width: rem(15)
+
+.catalog
+	padding-top: rem(25)
+	padding-bottom: rem(25)
+	background: url(../img/catalog/c_bgc.jpg) repeat
+	background-attachment: fixed
+	.container
+		.title__block
+			.title__line
+				h2
+					font-size: rem(28)
+					margin-top: rem(20)
+					margin-bottom: rem(20)
+					text-align: center
+					line-height: normal
+					font-weight: normal
+					color: #CA1020
+					.kozak
+						color: black
+						font-size: rem(70)
+						font-family: ancientkyiv
+				p
+					font-size: rem(20)
+					text-align: center
+					color: #555
+				.info__postHeader
+					text-align: center
+					font-size: rem(26)
+		.cat__block
+			margin-bottom: rem(25)
+			.cat__item
+				.cat__wrapper
+					background-color: #f4f4f4
+					padding: rem(20) rem(20)
+					width: 100%
+					margin: 0 auto
+					.cat__inner
+						text-align: center
+						.h4
+							font-size: 18px
+							line-height: rem(22)
+							font-weight: normal
+							text-transform: uppercase
+							.kozak
+								font-size: 20px
+								color: #ca1020
+						img
+							margin-bottom: rem(20)
+							transition: 0.35s
+						.cat__price
+							margin-bottom: rem(10)
+							span
+								font-weight: normal
+								text-decoration: line-through
+								text-decoration-color: #000
+								font-size: 22px
+								color: #666
+								margin-right: rem(5)
+							strong
+								color: #ca1020
+								font-size: 32px
+								letter-spacing: -1px
+						.cat__button
+							margin-bottom: rem(20)
+							input
+								margin: rem(10) auto
+								height: rem(53)
+								line-height: rem(53)
+								color: #000
+								width: 100%
+								font-size: 13px
+								text-transform: uppercase
+								padding: 0 rem(20)
+								background-color: #fff
+								border: 0
+								display: block
+							.btn
+								margin: 0 auto
+								border: 0
+								height: rem(53)
+								line-height: rem(53)
+								text-transform: uppercase
+								font-weight: bold
+								font-size: 15px
+								display: block
+								text-align: center
+								width: 100%
+								background: #30b530
+								color: #fff
+								cursor: pointer
+								&:hover
+									background-color: darken(#30b530, 10%)
+						.cat__text
+							padding: 0
+							margin: 0
+							li
+								list-style: none
+								font-size: 14px
+		.gifts__block
+			.gift__item
+				display: flex
+				justify-content: center
+				margin-bottom: rem(15)
+				.wrap
+					position: relative
+					height: rem(200)
+					width: rem(200)
+					&:hover .gift__text
+							transform: translateY(0)
+							opacity: 1
+					&:hover .gift__img
+						transform: scale(0.5) translateY(-100%)
+					.block
+						height: 100%
+						width: 100%
+						position: absolute
+						transition: .35s ease-in-out
+					.gift__text
+						background-color: rgba(1,1,1,0.4)
+						transform: translateY(100%)
+						line-height: initial
+						opacity: 0
+						z-index: 0
+						text-align: center
+						padding: rem(15) rem(15) rem(15)
+						h2
+							color: #fff
+							font-size: 28px
+							line-height: rem(29)
+							font-weight: normal
+							margin-top: rem(20)
+							margin-bottom: rem(10)
+							padding-bottom: rem(10)
+							font-weight: 200
+							border-bottom: 1px solid #f6f6f6
+						p
+							color: #fce980
+							font-size: 15px
+					.gift__img
+						transform: scale(1)
+						z-index: 1
+						border: 5px solid #fce980
+						border-radius: 50%
+		.cat__stoim
+			.col-12
+				p
+					text-align: center
+					font-size: 22px
+					padding-top: rem(10)
+					font-weight: bold
+
+// Catalog End
+
 .video
-	background: url(../img/sub-order-1.jpg) 80% 50%/cover no-repeat
+	background: url(../img/sub-order-1.jpg) 60% 50%/cover no-repeat
 	padding: rem(20) 0 rem(20) 0
 	background-attachment: fixed
 	.container-fluid
@@ -384,7 +583,8 @@ header
 					text-shadow: rem(1) rem(1) rem(5) #000
 					line-height: normal
 					.sale, .sale span
-						font-family: bernier
+						font-family: ancientkyiv
+						color: #CA1020
 						font-size: rem(38)
 						font-weight: normal
 						line-height: normal
@@ -405,7 +605,7 @@ header
 					font-weight: normal
 					.sale, .sale span
 						font-size: rem(38)
-						font-family: bernier
+						font-family: ancientkyiv
 						font-weight: normal
 						line-height: normal
 					.sale
@@ -469,14 +669,14 @@ header
 					height: rem(68)
 			.form-block
 				h2
-					font-size: rem(30)
+					font-size: rem(28)
 					text-align: center
 					line-height: normal
 					color: #CA1020
 					font-weight: normal
 					.sale, .sale span
-						font-size: rem(36)
-						font-family: bernier
+						font-size: rem(40)
+						font-family: ancientkyiv
 						font-weight: normal
 						line-height: normal
 					.sale
@@ -540,7 +740,7 @@ header
 					font-weight: normal
 					.sale, .sale span
 						font-size: rem(38)
-						font-family: bernier
+						font-family: ancientkyiv
 						font-weight: normal
 						line-height: normal
 					.sale
@@ -792,8 +992,9 @@ header
 
 .functions
 	padding: rem(30) 0 0 0
+	background: url(../img/modern/zakuska.jpg) center center / cover no-repeat
 	.container
-		.row
+		.func-houw
 			margin-bottom: rem(20)
 			h2
 				font-size: rem(22)
@@ -801,23 +1002,21 @@ header
 				font-weight: normal
 				line-height: normal
 				text-align: center
+				color: #fff
 				.sale, .sale span
 					font-size: rem(38)
-					font-family: bernier
+					font-family: ancientkyiv
 					font-weight: normal
 					line-height: normal
+					color: #CA1020
 			p
 				font-size: rem(16)
 				margin: 0 0 rem(20) 0
 				line-height: normal
 				text-align: center
-				color: #0B061B
+				color: #fff
 			.img-bottom
 				margin: 0 auto
-			.pc-bottom-modern
-				display: none
-			.mob-bottom-modern
-				margin-bottom: rem(20)
 			.row
 				.image
 					img
@@ -827,11 +1026,11 @@ header
 					line-height: normal
 					text-align: center
 					font-weight: 500
-					color: #0B061B
-					p
-						margin: 0 0 rem(10) 0
-						font-size: rem(20)
-						color: #CA1020
+					color: #fff
+					// p
+					// 	margin: 0 0 rem(10) 0
+					// 	font-size: rem(20)
+					// 	color: #CA1020
 					.row
 						.col-6
 							padding: 0 rem(10)
@@ -839,7 +1038,24 @@ header
 							height: rem(150)
 							img
 								margin: 0 auto rem(10) auto
+		// .func-diagram
+		// 	.pc-bottom-modern
+		// 		display: none
+		// 	.mob-bottom-modern
+		// 		margin-bottom: rem(20)
+
 // Functions End
+
+.function-diagram
+	padding: rem(30) 0
+	.container
+		.col-12
+			.pc-bottom-modern
+				display: none
+			.mob-bottom-modern
+				margin-bottom: rem(20)
+
+// Functions-diagram End
 
 .zavod
 	padding: rem(30) 0
@@ -861,12 +1077,26 @@ header
 					line-height: normal
 					.sale, .sale span
 						font-size: rem(30)
-						font-family: bernier
+						font-family: ancientkyiv
 						font-weight: normal
 						line-height: normal
 				p
 					font-size: rem(18)
 					line-height: normal
+				.video_wr
+					.thumb-wrap
+						position: relative
+						padding-bottom: 56.25%
+						padding-top: rem(30)
+						height: 0
+						overflow: hidden
+						text-align: center
+						iframe
+							position: absolute
+							top: 0
+							left: 0
+							width: 100%
+							height: 100%
 
 // Zavod End
 
