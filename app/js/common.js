@@ -61,7 +61,7 @@ $(function() {
 
 $(function() {
 
-	$("#headerForm, #headerFormMain, #mainForm, #akciyaForm1, #akciyaForm2, #deliveryForm, #f-call-form").submit(function() { //Change
+	$("#headerForm, #headerFormMain, #mainForm, #akciyaForm1, #akciyaForm2, #deliveryForm, #f-call-form, #c_thirtyfive, #c_twentyfive, #c_fourteen").submit(function() { //Change
 		var th = $(this);
 
 		$.ajax({
