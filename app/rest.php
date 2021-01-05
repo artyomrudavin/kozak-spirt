@@ -6,7 +6,7 @@ define('CRM_PATH', '/crm/configs/import/lead.php'); // CRM server REST service p
 
 // CRM server authorization data
 define('CRM_LOGIN', 'serg.adm.bitrix24@gmail.com'); // login of a CRM user able to manage leads
-define('CRM_PASSWORD', 'sergpass2018'); // password of a CRM user
+define('CRM_PASSWORD', 'Rsegpass2018'); // password of a CRM user
 // OR you can send special authorization hash which is sent by server after first successful connection with login and password
 //define('CRM_AUTH', 'e54ec19f0c5f092ea11145b80f465e1a'); // authorization hash
 
@@ -29,6 +29,18 @@ function get_ip()
     return $ip;
 }
 
+// Handle the parsing of the _ga cookie or setting it to a unique identifier
+
+function gaParseCookie()
+{
+	if (isset($_COOKIE['_ga'])) {
+		list($version,$domainDepth, $cid1, $cid2) = explode('.', $_COOKIE["_ga"]);
+		$cid = $cid1.'.'.$cid2;
+	}
+	else $cid = gaGenUUID();
+	return $cid;
+}
+
 // POST processing
 if ($_SERVER['REQUEST_METHOD'] == 'POST')
 {
@@ -42,7 +54,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST')
         'EMAIL_WORK' => $leadData['EMAIL_WORK'],
         'COMMENTS' => $leadData['COMMENTS'],
         'SOURCE_ID' => $leadData['SOURCE_ID'],
-		'UF_CRM_1539692902' => get_ip()
+		'UF_CRM_1569920847' => gaParseCookie(),
+        'UF_CRM_1539692902' => get_ip(),
+        'UF_CRM_1601542049455' => 'kazachok-samagon.com.ua'
 	);
 
 	// append authorization data
@@ -117,7 +131,7 @@ $strmailPostData = '';
 			$strmailPostData .= ($strmailPostData == '' ? '' : '').$key.'= '.$value."\r\n";
 
 $recepient = "aquagradus@gmail.com";
-$sitename = "kazachok-samagon.com.ua/";
+$sitename = "kazachok-samagon.com.ua";
 
 $pagetitle = "Новая заявка \"$sitename\"";
 mail($recepient, $pagetitle, $strmailPostData, "Content-type: text/plain; charset=\"utf-8\"\n From: $recepient");

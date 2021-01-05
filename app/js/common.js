@@ -40,7 +40,7 @@ $(function() {
 
 $(function() {
 
-	$('.menu-f a, #menu a').click( function(){ // ловим клик по ссылке с классом go_to
+	$('.menu-f a, #menu a, .banner a').click( function(){ // ловим клик по ссылке с классом go_to
 	var scroll_el = $(this).attr('href'); // возьмем содержимое атрибута href, должен быть селектором, т.е. например начинаться с # или .
         if ($(scroll_el).length != 0) { // проверим существование элемента чтобы избежать ошибки
 	    $('html, body').animate({ scrollTop: $(scroll_el).offset().top - 75}, 2000); // анимируем скроолинг к элементу scroll_el
@@ -61,8 +61,11 @@ $(function() {
 
 $(function() {
 
-	$("#headerForm, #headerFormMain, #mainForm, #akciyaForm1, #akciyaForm2, #deliveryForm, #f-call-form, #c_thirtyfive, #c_twentyfive, #c_fourteen").submit(function() { //Change
+	$("#headerForm, #headerFormMain, #mainForm, #akciyaForm1, #akciyaForm2, #deliveryForm, #f-call-form, #c_thirtyfive, #c_twentyfive, #c_fourteen, #c2_thirtyfive, #c2_twentyfive, #c2_fourteen, #c_bez, #bf-call").submit(function() { //Change
 		var th = $(this);
+		var submitButton = th.find("button[type='submit']");
+		console.log(submitButton);
+		submitButton.addClass('btn-disable').prop("disabled", true);
 
 		$.ajax({
 			type: "POST",
@@ -72,9 +75,9 @@ $(function() {
 			// alert("Thank you!");
 			setTimeout(function() {
 				// Done Functions
-				th.trigger("reset");
+				location.href = "https://kazachok-samagon.com.ua/sps";
+				// th.trigger("reset");
 			}, 500);
-			location.href = "https://kazachok-samagon.com.ua/sps";
 		});
 		return false;
 	});
@@ -141,15 +144,15 @@ updater(document.getElementById("days1"),
 	document.getElementById("minutes1"),
 	document.getElementById("seconds1"));
 
-updater(document.getElementById("days2"),
-	document.getElementById("hours2"),
-	document.getElementById("minutes2"),
-	document.getElementById("seconds2"));
+// updater(document.getElementById("days2"),
+// 	document.getElementById("hours2"),
+// 	document.getElementById("minutes2"),
+// 	document.getElementById("seconds2"));
 
-updater(document.getElementById("days3"),
-	document.getElementById("hours3"),
-	document.getElementById("minutes3"),
-	document.getElementById("seconds3"));
+// updater(document.getElementById("days3"),
+// 	document.getElementById("hours3"),
+// 	document.getElementById("minutes3"),
+// 	document.getElementById("seconds3"));
 
 });
 
@@ -157,11 +160,27 @@ updater(document.getElementById("days3"),
 
 $(function() {
 
+	$( '.c_bez' ).hover(
+		function() {
+			$(this).attr('src', 'img/catalog/c_suh.jpg');
+		}, function() {
+			$(this).attr('src', 'img/catalog/c_bez.jpg');
+		}
+	);
+
 	$( '.c_fourteen' ).hover(
 		function() {
 			$(this).attr('src', 'img/catalog/c_suh.jpg');
 		}, function() {
 			$(this).attr('src', 'img/catalog/c_14litr.jpg');
+		}
+	);
+
+	$( '.c2_fourteen' ).hover(
+		function() {
+			$(this).attr('src', 'img/catalog/c2_bez.jpg');
+		}, function() {
+			$(this).attr('src', 'img/catalog/c2_14litr.jpg');
 		}
 	);
 
@@ -173,6 +192,14 @@ $(function() {
 		}
 	);
 
+	$( '.c2_twentyfive' ).hover(
+		function() {
+			$(this).attr('src', 'img/catalog/c2_bez.jpg');
+		}, function() {
+			$(this).attr('src', 'img/catalog/c2_25litr.jpg');
+		}
+	);
+
 	$( '.c_thirtyfive' ).hover(
 		function() {
 			$(this).attr('src', 'img/catalog/c_suh.jpg');
@@ -181,37 +208,45 @@ $(function() {
 		}
 	);
 
+	$( '.c2_thirtyfive' ).hover(
+		function() {
+			$(this).attr('src', 'img/catalog/c2_bez.jpg');
+		}, function() {
+			$(this).attr('src', 'img/catalog/c2_35litr.jpg');
+		}
+	);
+
 });
 
 // Date Today
 
-$(function() {
+// $(function() {
 
-	var dateNow = new Date(),
-	todayInner = $('.today');
+// 	var dateNow = new Date(),
+// 	todayInner = $('.today');
 	
-	function formatDate(date) {
+// 	function formatDate(date) {
 
-		var dd = date.getDate() + 3;
-		if (dd < 10) dd = '0' + dd;
+// 		var dd = date.getDate() + 3;
+// 		if (dd < 10) dd = '0' + dd;
 
-		var mm = date.getMonth() + 1;
-		if (mm < 10) mm = '0' + mm;
+// 		var mm = date.getMonth() + 1;
+// 		if (mm < 10) mm = '0' + mm;
 
-		if (dd >= 31) {
-			dd = '03';
-			mm = mm + 1;
-		} else if (dd >= 29) {
-			dd = '01';
-			mm = mm + 1;
-		} else if (dd >= 30) {
-			dd = '02';
-			mm = mm + 1;
-		}
+// 		if (dd >= 31) {
+// 			dd = '03';
+// 			mm = mm + 1;
+// 		} else if (dd >= 29) {
+// 			dd = '01';
+// 			mm = mm + 1;
+// 		} else if (dd >= 30) {
+// 			dd = '02';
+// 			mm = mm + 1;
+// 		}
 
-		return dd + '.' + mm;
-	};
+// 		return dd + '.' + mm;
+// 	};
 
-	todayInner.text(formatDate(dateNow));
-	// console.log(formatDate(dateNow));
-});
+// 	todayInner.text(formatDate(dateNow));
+// 	// console.log(formatDate(dateNow));
+// });

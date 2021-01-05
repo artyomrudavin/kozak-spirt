@@ -32,6 +32,16 @@
 // ≤768px
 +media-breakpoint-up(md)
 
+	/* BlackFriday Banner Start */
+
+	.banner
+		display: block // fridayblack
+
+	.bannerm
+		display: none // fridayblack
+
+	/* BlackFriday Banner End */
+
 	// header
 	// 	.container
 	// 		.row
@@ -51,6 +61,26 @@
 	// 					margin-right: rem(-100)
 	// 				.header-form
 	// 					display: flex
+
+	.main
+		background: url(../img/main4.jpg) center center/cover no-repeat
+		.container
+			.row
+				.main-order
+					.mobile-img
+						display: none
+					.main-form
+						.price-block
+							.price
+								font-size: rem(24)
+								line-height: rem(34)
+								.oldprice
+									font-size: rem(24)
+								.newprice
+									font-size: rem(34)
+							.main-btn
+								.btn
+									font-size: rem(20)
 
 	// .main
 	// 	background: url(../img/main3.jpg) center center/cover no-repeat
@@ -153,7 +183,7 @@
 				margin-bottom: rem(50)
 				.cat__item
 					.cat__wrapper
-						padding: rem(20) rem(40)
+						padding: rem(20) rem(20)
 						// width: 75%
 						.cat__inner
 							.h4
@@ -197,6 +227,30 @@
 	// 					line-height: inherit
 	// 					.sale, .sale span
 	// 						font-size: rem(64)
+
+	/* Blackfriday Start */
+
+	.blackfriday
+		// padding: rem(30) 0
+		.container
+			.bf-row
+				flex-direction: row
+				.bf-img-block
+					width: 50%
+				.bf-text-block
+					width: 50%
+					.aqua, .small-h
+						font-size: 44px
+						line-height: 44px
+					.aqua
+						.logo-font
+							font-size: 48px
+					.img-responsive
+					.small-h
+					.bf-adds
+					.bf-btn
+
+	/* Blackfriday End */
 
 	// .scheme
 	// 	padding: rem(70)
@@ -399,7 +453,7 @@
 				display: none
 
 	.main
-		background: url(../img/main3.jpg) center center/cover no-repeat
+		background: url(../img/main4.jpg) center center/cover no-repeat
 		.container
 			.row
 				.main-order
@@ -408,11 +462,12 @@
 					.main-form
 						.price-block
 							.price
-								font-size: rem(28)
+								font-size: rem(24)
+								line-height: rem(34)
 								.oldprice
-									font-size: rem(28)
+									font-size: rem(24)
 								.newprice
-									font-size: rem(40)
+									font-size: rem(34)
 							.main-btn
 								.btn
 									font-size: rem(20)
@@ -519,7 +574,7 @@
 						display: flex
 
 	.main
-		background: url(../img/main3.jpg) center center/cover no-repeat
+		background: url(../img/main4.jpg) center center/cover no-repeat
 		.container
 			.row
 				.main-header
@@ -851,7 +906,7 @@
 +media-breakpoint-up(xxl)
 
 	.main
-		background: url(../img/main3.jpg) 50% 0 no-repeat
+		background: url(../img/main4.jpg) 50% 0 no-repeat
 		.container
 			.row
 				.main-header
