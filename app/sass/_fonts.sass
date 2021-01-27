@@ -1,9 +1,14 @@
-@import "_mixins/font-face"
+// FONTS LOAD SECTION
 
-+font-face("roboto", "../fonts/RobotoRegular/RobotoRegular")
-+font-face("roboto", "../fonts/RobotoBold/RobotoBold", bold)
-+font-face("bernier", "../fonts/BernierRegular/BernierRegular")
-+font-face("pancettapro", "../fonts/PancettaProRegular/PancettaProRegular")
-+font-face("pancettapro", "../fonts/PancettaProBold/PancettaProBold", bold)
-+font-face("pancettapro", "../fonts/PancettaProSemiBold/PancettaProSemiBold", 500)
-+font-face("ancientkyiv", "../fonts/AncientKyivRegular/AncientKyivRegular")
+@mixin font($fname, $fstyle, $fweight, $furl)
+	@font-face
+		font-family: $fname
+		font-style: $fstyle
+		font-weight: $fweight
+		src: local($fname), url($furl) format('woff2')
+		// font-display: swap // Uncomment to initially display system fonts
+
+@include font('AncientKyivRegular', normal, 400, '../fonts/AncientKyivRegular/AncientKyivRegular.woff2')
+@include font('PancettaPro', normal, 400, '../fonts/PancettaPro/PancettaProRegular.woff2')
+@include font('PancettaPro', normal, 700, '../fonts/PancettaPro/PancettaProBold.woff2')
+@include font('PancettaPro', normal, 500, '../fonts/PancettaPro/PancettaProSemiBold.woff2')

@@ -22,6 +22,11 @@
 	<meta name="theme-color" content="#fff">
 	<!-- Custom Browsers Color End -->
 
+	<link rel="preload" href="fonts/AncientKyivRegular/AncientKyivRegular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+	<link rel="preload" href="fonts/PancettaPro/PancettaProRegular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+	<link rel="preload" href="fonts/PancettaPro/PancettaProBold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+	<link rel="preload" href="fonts/PancettaPro/PancettaProSemiBold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+
 	<link rel="stylesheet" href="css/main.min.css">
 
 	<!-- Google Tag Manager -->
@@ -57,7 +62,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
 
-	<div class="banner"> <!-- fridayblack -->
+	<!-- <div class="banner"> <!~~ fridayblack ~~>
 		<a href="#blackfriday">
 			<img src="img/header/ny/ny.jpg" alt="black friday">
 		</a>
@@ -66,7 +71,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 		<a href="#blackfriday">
 			<img src="img/header/ny/ny-sm.jpg" alt="black friday">
 		</a>
-	</div>
+	</div> -->
 
 	<header id="navbar">
 		<div class="container">
@@ -106,9 +111,21 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 						</ul>
 					</nav>		
 				</div>
+				<div class="local local-desc">
+					<ul class="lang__control">
+						<li><a data-lang="uk-ua" href="https://kazachok-samagon.com.ua/ua/">UA</a></li>
+						<li><a data-lang="ru-ru" class="lang-active">RU</a></li>
+					</ul>
+				</div>
 			</div>
 			<div class="row mob-call">
 				<button type="button" class="btn" data-toggle="modal" data-target="#f-call">Заказать звонок</button>
+				<div class="local local-mob">
+					<ul class="lang__control">
+						<li><a data-lang="uk-ua" href="https://kazachok-samagon.com.ua/ua/">UA</a></li>
+						<li><a data-lang="ru-ru" class="lang-active">RU</a></li>
+					</ul>
+				</div>
 			</div>
 		</div>
 	</header>
@@ -139,6 +156,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 							<!-- <a href="tel:+380500111963">+38 (050) 011-19-63</a><br> -->
 							<a href="tel:+380677596326">+38 (067) 759-63-26</a>
 						</div>
+						<div class="local local-main">
+							<ul class="lang__control">
+								<li><a data-lang="uk-ua" href="https://kazachok-samagon.com.ua/ua/">UA</a></li>
+								<li><a data-lang="ru-ru" class="lang-active">RU</a></li>
+							</ul>
+						</div>
 					</div>
 					<div class="col-lg-6 video-order">
 						<div class="row videos">
@@ -151,10 +174,19 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 										<div class="modal-content">
 											<button type="button" class="close" data-dismiss="modal">&times;</button>
 											<div class="row modal-v">
-												<div class="video_wr">
-													<div class="thumb-wrap">
-														<iframe width="560" height="315" src="https://www.youtube.com/embed/zi5a31_oxL4" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-													</div>
+												<div class="video">
+													<a class="video__link" href="https://youtu.be/zi5a31_oxL4">
+														<picture>
+															<source srcset="https://i.ytimg.com/vi_webp/zi5a31_oxL4/maxresdefault.webp" type="image/webp">
+															<img class="video__media" src="https://i.ytimg.com/vi/zi5a31_oxL4/maxresdefault.jpg" alt="Обзор самогонного аппарата AquaGradus Козачок">
+														</picture>
+													</a>
+													<button class="video__button" aria-label="Запустить видео">
+														<svg width="68" height="48" viewBox="0 0 68 48">
+															<path class="video__button-shape" d="M66.52,7.74c-0.78-2.93-2.49-5.41-5.42-6.19C55.79,.13,34,0,34,0S12.21,.13,6.9,1.55 C3.97,2.33,2.27,4.81,1.48,7.74C0.06,13.05,0,24,0,24s0.06,10.95,1.48,16.26c0.78,2.93,2.49,5.41,5.42,6.19 C12.21,47.87,34,48,34,48s21.79-0.13,27.1-1.55c2.93-0.78,4.64-3.26,5.42-6.19C67.94,34.95,68,24,68,24S67.94,13.05,66.52,7.74z"></path>
+															<path class="video__button-icon" d="M 45,24 27,14 27,34"></path>
+														</svg>
+													</button>
 												</div>
 											</div>
 										</div>
@@ -169,10 +201,19 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 										<div class="modal-content">
 											<button type="button" class="close" data-dismiss="modal">&times;</button>
 											<div class="row modal-v">
-												<div class="video_wr">
-													<div class="thumb-wrap">
-														<iframe src="https://www.youtube.com/embed/gkQWs4p0aUA" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-													</div>
+												<div class="video">
+													<a class="video__link" href="https://youtu.be/gkQWs4p0aUA">
+														<picture>
+															<source srcset="https://i.ytimg.com/vi_webp/gkQWs4p0aUA/maxresdefault.webp" type="image/webp">
+															<img class="video__media" src="https://i.ytimg.com/vi/gkQWs4p0aUA/maxresdefault.jpg" alt="Инструкция к самогонному аппарату AquaGradus Козачок">
+														</picture>
+													</a>
+													<button class="video__button" aria-label="Запустить видео">
+														<svg width="68" height="48" viewBox="0 0 68 48">
+															<path class="video__button-shape" d="M66.52,7.74c-0.78-2.93-2.49-5.41-5.42-6.19C55.79,.13,34,0,34,0S12.21,.13,6.9,1.55 C3.97,2.33,2.27,4.81,1.48,7.74C0.06,13.05,0,24,0,24s0.06,10.95,1.48,16.26c0.78,2.93,2.49,5.41,5.42,6.19 C12.21,47.87,34,48,34,48s21.79-0.13,27.1-1.55c2.93-0.78,4.64-3.26,5.42-6.19C67.94,34.95,68,24,68,24S67.94,13.05,66.52,7.74z"></path>
+															<path class="video__button-icon" d="M 45,24 27,14 27,34"></path>
+														</svg>
+													</button>
 												</div>
 											</div>
 										</div>
@@ -187,10 +228,19 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 										<div class="modal-content">
 											<button type="button" class="close" data-dismiss="modal">&times;</button>
 											<div class="row modal-v">
-												<div class="video_wr">
-													<div class="thumb-wrap">
-														<iframe width="560" height="315" src="https://www.youtube.com/embed/J4hHh8Qp55M" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-													</div>
+												<div class="video">
+													<a class="video__link" href="https://youtu.be/J4hHh8Qp55M">
+														<picture>
+															<source srcset="https://i.ytimg.com/vi_webp/J4hHh8Qp55M/maxresdefault.webp" type="image/webp">
+															<img class="video__media" src="https://i.ytimg.com/vi/J4hHh8Qp55M/maxresdefault.jpg" alt="Завод AquaGradus">
+														</picture>
+													</a>
+													<button class="video__button" aria-label="Запустить видео">
+														<svg width="68" height="48" viewBox="0 0 68 48">
+															<path class="video__button-shape" d="M66.52,7.74c-0.78-2.93-2.49-5.41-5.42-6.19C55.79,.13,34,0,34,0S12.21,.13,6.9,1.55 C3.97,2.33,2.27,4.81,1.48,7.74C0.06,13.05,0,24,0,24s0.06,10.95,1.48,16.26c0.78,2.93,2.49,5.41,5.42,6.19 C12.21,47.87,34,48,34,48s21.79-0.13,27.1-1.55c2.93-0.78,4.64-3.26,5.42-6.19C67.94,34.95,68,24,68,24S67.94,13.05,66.52,7.74z"></path>
+															<path class="video__button-icon" d="M 45,24 27,14 27,34"></path>
+														</svg>
+													</button>
 												</div>
 											</div>
 										</div>
@@ -221,22 +271,22 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 								</div>
 								<div class="row price-block">
 									<div class="col-md-6 price">
-										14л: <span class="oldprice">4090</span>
-										<span class="newprice">2990</span> грн.<br>
-										25л: <span class="oldprice">4490</span>
+										14л: <span class="oldprice">4490</span>
 										<span class="newprice">3490</span> грн.<br>
-										35л: <span class="oldprice">4990</span>
+										25л: <span class="oldprice">4990</span>
 										<span class="newprice">3990</span> грн.<br>
+										35л: <span class="oldprice">5590</span>
+										<span class="newprice">4590</span> грн.<br>
 									</div>
 									<div class="col-md-6 main-btn">
 										<button class="btn" type="submit">Заказать</button>
 									</div>
 								</div>
 								<div class="row gifts">
-									<p class="col-12"><strong>При заказе до <span class="today">03.01.2021</span> получите в подарок:</strong></p>
+									<p class="col-12"><strong>При заказе до <span class="today">03.02.2021</span> получите в подарок:</strong></p>
 									<div class="col-4">
 										<img src="img/gift-1.png" alt="Скидка Самогонный аппарат с сухопарником КОЗАЧОК" class="img-responsive gift">
-										<p>Скидка 1200 грн</p>
+										<p>Скидка 1000 грн</p>
 									</div>
 									<div class="col-4">
 										<img src="img/gift-2.png" alt="Сборник рецептов Самогонный аппарат с сухопарником КОЗАЧОК" class="img-responsive gift">
@@ -258,27 +308,27 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 			<div class="container">
 				<div class="row">
 					<div class="col-4 col-md-2 text-center">
-						<img src="../img/wehave/payout.png">
+						<img src="img/wehave/payout.png">
 						<p>Оплата при получении</p>
 					</div>
 					<div class="col-4 col-md-2 text-center">
-						<img src="../img/wehave/bankcard.png">
+						<img src="img/wehave/bankcard.png">
 						<p>Возможность оплаты картой VISA, MasterCard</p>
 					</div>
 					<div class="col-4 col-md-2 text-center">
-						<img src="../img/wehave/thumbsup.png">
+						<img src="img/wehave/thumbsup.png">
 						<p>Гарантия качества 5 лет</p>
 					</div>
 					<div class="col-4 col-md-2 text-center">
-						<img src="../img/wehave/cargo.png">
+						<img src="img/wehave/cargo.png">
 						<p>Оперативная доставка 1-3 дня</p>
 					</div>
 					<div class="col-4 col-md-2 text-center">
-						<img src="../img/wehave/delivery.png">
+						<img src="img/wehave/delivery.png">
 						<p>Доставка по всей Украине</p>
 					</div>
 					<div class="col-4 col-md-2 text-center">
-						<img src="../img/wehave/garanty.png">
+						<img src="img/wehave/garanty.png">
 						<p>Наличие фильтра - сухопарника</p>
 					</div>
 				</div>
@@ -297,7 +347,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 			<img src="img/banki-2.png" alt="Самогонный аппарат с сухопарником КОЗАЧОК" class="img-responsive des-mobile-img">
 		</section>
 
-		<section class="video" id="video">
+		<section class="video-block" id="video">
 			<div class="container-fluid">
 				<div class="row">
 					<div class="col-md-5 col-12 video_text">
@@ -307,16 +357,29 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 							<span>Узнай все преимущества сухопарника всего за 3 минуты.</span>
 						</h2>
 					</div>
-					<div class="col-md-7 col-12 video_wr">
-						<div class="thumb-wrap">
-							<iframe width="560" height="315" src="https://www.youtube.com/embed/zi5a31_oxL4" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+					<div class="col-md-7 col-12">
+
+						<div class="video">
+							<a class="video__link" href="https://youtu.be/zi5a31_oxL4">
+								<picture>
+									<source srcset="https://i.ytimg.com/vi_webp/zi5a31_oxL4/maxresdefault.webp" type="image/webp">
+									<img class="video__media" src="https://i.ytimg.com/vi/zi5a31_oxL4/maxresdefault.jpg" alt="Обзор самогонного аппарата AquaGradus Козачок">
+								</picture>
+							</a>
+							<button class="video__button" aria-label="Запустить видео">
+								<svg width="68" height="48" viewBox="0 0 68 48">
+									<path class="video__button-shape" d="M66.52,7.74c-0.78-2.93-2.49-5.41-5.42-6.19C55.79,.13,34,0,34,0S12.21,.13,6.9,1.55 C3.97,2.33,2.27,4.81,1.48,7.74C0.06,13.05,0,24,0,24s0.06,10.95,1.48,16.26c0.78,2.93,2.49,5.41,5.42,6.19 C12.21,47.87,34,48,34,48s21.79-0.13,27.1-1.55c2.93-0.78,4.64-3.26,5.42-6.19C67.94,34.95,68,24,68,24S67.94,13.05,66.52,7.74z"></path>
+									<path class="video__button-icon" d="M 45,24 27,14 27,34"></path>
+								</svg>
+							</button>
 						</div>
+
 					</div>
 				</div>
 			</div>
 		</section>
 
-		<section class="blackfriday" id="blackfriday"> <!-- fridayblack -->
+		<!-- <section class="blackfriday" id="blackfriday"> <!~~ fridayblack ~~>
 			<div class="container">
 				<div class="row bf-row">
 					<div class="bf-img-block">
@@ -324,66 +387,28 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 					</div>
 					<div class="bf-text-block">
 						<p class="small-h">Получай больше в Новый год!</p>
-						<!-- <img src="img/bolshe-ny.png" alt="" class="img-responsive"> -->
+						<!~~ <img src="img/bolshe-ny.png" alt="" class="img-responsive"> ~~>
 						<p class="aqua">от <span class="logo-font">AquaGradus</span></p>
 						<p class="bf-adds">Еще больше подарков!<br><strong>Угольгое смягчение вкуса, Ароматизация во время перегонки либо Контроль крепости онлайн!</strong><br>
 						Выбирай подходящий тебе подарок!</p>
 						<form id="bf-call" method="post">
 
-							<!-- Hidden Required Fields -->
+							<!~~ Hidden Required Fields ~~>
 							<input type="hidden" name="DATA[TITLE]" value="Новый лид: Аппарат - Козачок; Форма - Новый год;">
 							<input type="hidden" name="DATA[SOURCE_ID]" value="Веб-сайт Козачок">
-							<!-- <textarea class="hide" name="DATA[COMMENTS]"></textarea> -->
-							<!-- END Hidden Required Fields -->
+							<!~~ <textarea class="hide" name="DATA[COMMENTS]"></textarea> ~~>
+							<!~~ END Hidden Required Fields ~~>
 
 							<input type="tel" name="DATA[PHONE_MOBILE]" required placeholder="Введите свой телефон" class="buy">
 
 							<button type="submit" class="btn modal-btn bf-btn" style="background-color: #c01926">Получить полезные подарки</button>
 						</form>
-						<!-- <a href="#" class="btn bf-btn">Получить полезные подарки</a> -->
+						<!~~ <a href="#" class="btn bf-btn">Получить полезные подарки</a> ~~>
 					</div>
 				</div>
 			</div>
 
-			<!--<div id="blackfriday-modal" class="modal-mask hide">
-				<div id="mW3" class="modal-wrapper">
-					<div class="modal-container modal-container--buy">
-						<div class="modal-close"></div>
-						<div class="modal-header">
-							<h3 class="modal-title modal-title--buy">Акция в Новый год!</h3>
-						</div>
-						<div class="modal-body">
-							<div>
-								<div class="modal-order-price" style="border: 5px solid #c01926">
-									<div>
-										<div class="order-price-value num">
-											Оставьте заявку и получайте больше за те же деньги!
-										</div>
-									</div>
-								</div>
-								<form id="bf-call" method="post">
-
-									<!~~ Hidden Required Fields ~~>
-									<input type="hidden" name="DATA[TITLE]" value="Новый лид: Аппарат - Стандарт; Форма - Черная пятница;">
-									<input type="hidden" name="DATA[SOURCE_ID]" value="Веб-сайт Стандарт">
-									<textarea class="hide" name="DATA[COMMENTS]"></textarea>
-									 <!~~ END Hidden Required Fields ~~> 
-
-									<input type="tel" name="DATA[PHONE_MOBILE]" required placeholder="Введите свой телефон" class="buy">
-
-									<button type="submit" class="btn modal-btn" style="background-color: #c01926">Получить полезные подарки</button>
-
-								</form>
-							</div>
-						</div>
-						<div class="modal-footer">
-							перезвоним Вам в течение 15 минут
-						</div>
-					</div>
-				</div>
-			</div>-->
-
-		</section> <!-- Blackfriday End -->
+		</section> <!~~ Blackfriday End ~~> -->
 
 		<section class="cover">
 			<div class="container">
@@ -432,43 +457,18 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 					</div>
 				</div>
 				<div class="row cat__block">
-					<!--<div class="col-sm-6 col-md-3 cat__item">
-						<div class="cat__wrapper">
-							<div class="cat__inner">
-								<h4 class="h4">Самогонный аппарат<br><span class="kozak">Козачок</span><br>без емкости</h4>
-								<img src="img/catalog/c_bez.jpg" alt="small" class="img-responsive c_bez">
-								<div class="cat__price">
-									<!~~ <span>3890</span> ~~>
-									<strong>1 590 ₴</strong>
-								</div>
-								<form class="cat__button" method="post" id="c_bez">
-									
-									<input type="hidden" name="DATA[TITLE]" value="Новый лид: Козачок; Форма - Каталог без емкости">
-									<input type="hidden" name="DATA[SOURCE_ID]" value="Веб-сайт Козачок">
-
-									<input type="tel" class="form-input" name="DATA[PHONE_MOBILE]" required placeholder="Ваш телефон">
-									<button class="btn">Заказать</button>
-								</form>
-								<ul class="cat__text">
-									<li>Без емкости</li>
-									<li>Крепление - резьба 1/2"</li>
-									<li>Готового продукта - 2,5 л (40°)</li>
-								</ul>
-							</div>
-						</div>
-					</div>
 					<div class="col-sm-6 col-md-4 cat__item">
 						<div class="cat__wrapper">
 							<div class="cat__inner">
-								<h4 class="h4">Самогонный аппарат<br><span class="kozak">Козачок</span><br>с емкостью <strong>14 литров</strong></h4>
+								<h4 class="h4">Самогонный аппарат<br><span class="kozak">Козачок</span><br><strong>с сухопарником</strong><br>с емкостью <strong>14 литров</strong></h4>
 								<img src="img/catalog/c_14litr.jpg" alt="small" class="img-responsive c_fourteen">
 								<div class="cat__price">
-									<span>4090</span>
-									<strong>2 990 ₴</strong>
+									<span>4490</span>
+									<strong>3 490 ₴</strong>
 								</div>
 								<form class="cat__button" method="post" id="c_fourteen">
 									
-									<input type="hidden" name="DATA[TITLE]" value="Новый лид: Козачок; Форма - Каталог 14 литров">
+									<input type="hidden" name="DATA[TITLE]" value="Новый лид: Козачок; Форма - Каталог 14 литров с 1 сухопарником">
 									<input type="hidden" name="DATA[SOURCE_ID]" value="Веб-сайт Козачок">
 
 									<input type="tel" class="form-input" name="DATA[PHONE_MOBILE]" required placeholder="Ваш телефон">
@@ -485,15 +485,15 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 					<div class="col-sm-6 col-md-4 cat__item">
 						<div class="cat__wrapper">
 							<div class="cat__inner">
-								<h4 class="h4">Самогонный аппарат<br><span class="kozak">Козачок</span><br>с емкостью <strong>25 литров</strong></h4>
+								<h4 class="h4">Самогонный аппарат<br><span class="kozak">Козачок</span><br><strong>с сухопарником</strong><br>с емкостью <strong>25 литров</strong></h4>
 								<img src="img/catalog/c_25litr.jpg" alt="small" class="img-responsive c_twentyfive">
 								<div class="cat__price">
-									<span>4490</span>
-									<strong>3 490 ₴</strong>
+									<span>4990</span>
+									<strong>3 990 ₴</strong>
 								</div>
 								<form class="cat__button" method="post" id="c_twentyfive">
 									
-									<input type="hidden" name="DATA[TITLE]" value="Новый лид: Козачок; Форма - Каталог 25 литров">
+									<input type="hidden" name="DATA[TITLE]" value="Новый лид: Козачок; Форма - Каталог 25 литров с 1 сухопарником">
 									<input type="hidden" name="DATA[SOURCE_ID]" value="Веб-сайт Козачок">
 
 									<input type="tel" class="form-input" name="DATA[PHONE_MOBILE]" required placeholder="Ваш телефон">
@@ -510,15 +510,15 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 					<div class="col-sm-6 col-md-4 cat__item">
 						<div class="cat__wrapper">
 							<div class="cat__inner">
-								<h4 class="h4">Самогонный аппарат<br><span class="kozak">Козачок</span><br>с емкостью <strong>35 литров</strong></h4>
+								<h4 class="h4">Самогонный аппарат<br><span class="kozak">Козачок</span><br><strong>с сухопарником</strong><br>с емкостью <strong>35 литров</strong></h4>
 								<img src="img/catalog/c_35litr.jpg" alt="small" class="img-responsive c_thirtyfive">
 								<div class="cat__price">
-									<span>4990</span>
-									<strong>3 990 ₴</strong>
+									<span>5590</span>
+									<strong>4 590 ₴</strong>
 								</div>
 								<form class="cat__button" method="post" id="c_thirtyfive">
 									
-									<input type="hidden" name="DATA[TITLE]" value="Новый лид: Козачок; Форма - Каталог 35 литров">
+									<input type="hidden" name="DATA[TITLE]" value="Новый лид: Козачок; Форма - Каталог 35 литров с 1 сухопарником">
 									<input type="hidden" name="DATA[SOURCE_ID]" value="Веб-сайт Козачок">
 
 									<input type="tel" class="form-input" name="DATA[PHONE_MOBILE]" required placeholder="Ваш телефон">
@@ -534,39 +534,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 					</div>
 				</div>
 				<div class="row cat__block">
-					<!--<div class="col-sm-6 col-md-3 cat__item">
-						<div class="cat__wrapper">
-							<div class="cat__inner">
-								<h4 class="h4">Самогонный аппарат<br><span class="kozak">Козачок</span><br>без емкости</h4>
-								<img src="img/catalog/c_bez.jpg" alt="small" class="img-responsive c_bez">
-								<div class="cat__price">
-									<!~~ <span>3890</span> ~~>
-									<strong>1 590 ₴</strong>
-								</div>
-								<form class="cat__button" method="post" id="c_bez">
-									
-									<input type="hidden" name="DATA[TITLE]" value="Новый лид: Козачок; Форма - Каталог без емкости">
-									<input type="hidden" name="DATA[SOURCE_ID]" value="Веб-сайт Козачок">
-
-									<input type="tel" class="form-input" name="DATA[PHONE_MOBILE]" required placeholder="Ваш телефон">
-									<button class="btn">Заказать</button>
-								</form>
-								<ul class="cat__text">
-									<li>Без емкости</li>
-									<li>Крепление - резьба 1/2"</li>
-									<li>Готового продукта - 2,5 л (40°)</li>
-								</ul>
-							</div>
-						</div>
-					</div>-->
 					<div class="col-sm-6 col-md-4 cat__item">
 						<div class="cat__wrapper">
 							<div class="cat__inner">
 								<h4 class="h4">Самогонный аппарат<br><span class="kozak">Козачок</span><br><strong>с 2-мя сухопарниками</strong><br>с емкостью <strong>14 литров</strong></h4>
 								<img src="img/catalog/c2_14litr.jpg" alt="small" class="img-responsive c2_fourteen">
 								<div class="cat__price">
-									<span>4490</span>
-									<strong>3 490 ₴</strong>
+									<span>5590</span>
+									<strong>4 590 ₴</strong>
 								</div>
 								<form class="cat__button" method="post" id="c2_fourteen">
 									
@@ -590,8 +565,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 								<h4 class="h4">Самогонный аппарат<br><span class="kozak">Козачок</span><br><strong>с 2-мя сухопарниками</strong><br>с емкостью <strong>25 литров</strong></h4>
 								<img src="img/catalog/c2_25litr.jpg" alt="small" class="img-responsive c2_twentyfive">
 								<div class="cat__price">
-									<span>4990</span>
-									<strong>3 990 ₴</strong>
+									<span>6190</span>
+									<strong>5 190 ₴</strong>
 								</div>
 								<form class="cat__button" method="post" id="c2_twentyfive">
 									
@@ -615,8 +590,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 								<h4 class="h4">Самогонный аппарат<br><span class="kozak">Козачок</span><br><strong>с 2-мя сухопарниками</strong><br>с емкостью <strong>35 литров</strong></h4>
 								<img src="img/catalog/c2_35litr.jpg" alt="small" class="img-responsive c2_thirtyfive">
 								<div class="cat__price">
-									<span>5490</span>
-									<strong>4 490 ₴</strong>
+									<span>6790</span>
+									<strong>5 790 ₴</strong>
 								</div>
 								<form class="cat__button" method="post" id="c2_thirtyfive">
 									
@@ -650,7 +625,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 								<img src="img/catalog/gift1.png" alt="Скидка Самогонный аппарат с сухопарником КОЗАЧОК" class="img-responsive">
 							</div>
 							<div class="block gift__text">
-								<h2>Скидка 600 грн</h2>
+								<h2>Скидка 1000 грн</h2>
 								<p>Покупайте комплект Козачок на 14 литров и экономьте свои деньги</p>
 							</div>
 						</div>
@@ -680,7 +655,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 				</div>
 				<div class="row cat__stoim">
 					<div class="col-12">
-						<p>Стоимость Подарков без акции 750 грн!</p>
+						<p>Стоимость Подарков без акции 1225 грн!</p>
 					</div>
 				</div>
 			</div>
@@ -718,19 +693,19 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 					<div class="col-6 col-md-4 text-left all-text">
 						<ul>
 							<li class="row">
-								<div class="col"><img src="../img/scheme/icon-1.png"></div>
+								<div class="col"><img src="img/scheme/icon-1.png"></div>
 								<div class="col">Основной бак</div>
 							</li>
 							<li class="row">
-								<div class="col"><img src="../img/scheme/icon-2.png"></div>
+								<div class="col"><img src="img/scheme/icon-2.png"></div>
 								<div class="col">Клапан сброса давления</div>
 							</li>
 							<li class="row">
-								<div class="col"><img src="../img/scheme/icon-3.png"></div>
+								<div class="col"><img src="img/scheme/icon-3.png"></div>
 								<div class="col">Резьбовое соединение</div>
 							</li>
 							<li class="row">
-								<div class="col"><img src="../img/scheme/icon-4.png"></div>
+								<div class="col"><img src="img/scheme/icon-4.png"></div>
 								<div class="col">Термометр</div>
 							</li>
 						</ul>
@@ -739,24 +714,24 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 						<ul>
 							<li class="row">
 								<div class="col">Сухопарник-аромакорзина</div>
-								<div class="col"><img src="../img/scheme/icon-5.png"></div>
+								<div class="col"><img src="img/scheme/icon-5.png"></div>
 							</li>
 							<li class="row">
 								<div class="col">Змеевик-охладитель</div>
-								<div class="col"><img src="../img/scheme/icon-6.png"></div>
+								<div class="col"><img src="img/scheme/icon-6.png"></div>
 							</li>
 							<li class="row">
 								<div class="col">Кран для слива</div>
-								<div class="col"><img src="../img/scheme/icon-7.png"></div>
+								<div class="col"><img src="img/scheme/icon-7.png"></div>
 							</li>
 							<li class="row">
 								<div class="col">Мет. ручки</div>
-								<div class="col"><img src="../img/scheme/icon-8.png"></div>
+								<div class="col"><img src="img/scheme/icon-8.png"></div>
 							</li>
 						</ul>
 					</div>
 					<div class="col col-md-4 sheme-img order-md-1">
-						<img src="../img/scheme/devicefon-2.png" alt="Самогонный аппарат с сухопарником КОЗАЧОК" class="img-responsive">
+						<img src="img/scheme/devicefon-2.png" alt="Самогонный аппарат с сухопарником КОЗАЧОК" class="img-responsive">
 					</div>
 				</div>
 			</div>
@@ -766,7 +741,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 			<div class="container">
 				<div class="row">
 					<div class="col-md-4 nalogka">
-						<img src="../img/nalog.png" alt="Самогонный аппарат с сухопарником КОЗАЧОК" class="img-responsive">
+						<img src="img/nalog.png" alt="Самогонный аппарат с сухопарником КОЗАЧОК" class="img-responsive">
 						<h3>Оплата товара при получении</h3>
 						<p>Аппарат доставляется до получателя наложенным платежом. Никаких предоплат, Вы оплачиваете заказ только после его получения!</p>
 					</div>
@@ -776,7 +751,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 					<div class="col-md-5 form-block order-md-1">
 						<h2>
 							Заказывайте самогонный аппарат <span class="sale">Козачок</span> -
-							Получай подарки и скидку 600 грн!
+							Получай подарки и скидку 1000 грн!
 						</h2>
 						<form class="sup-form" method="post" id="akciyaForm1">
 							<p class="cta">Очистка от голов и сивушных масел сухопарником</p>
@@ -795,7 +770,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 								<div class="col-md-6 price">
 									<!-- <span class="oldprice">3890 </span> -->
 									<!-- <span class="newprice">3290</span> грн. -->
-									<span class="newprice">от 2990</span> грн.
+									<span class="newprice">от 3490</span> грн.
 								</div>
 								<div class="col-md-6 main-btn">
 									<button class="btn" type="submit">Заказать</button>
@@ -814,19 +789,19 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 						<h2>Комплектация самогонного аппарата<br><span class="sale">Козачок</span></h2>
 					</div>
 					<!-- <div class="col-6 col-md-3">
-						<img src="../img/preimushestva/icon_autoclav.png">
+						<img src="img/preimushestva/icon_autoclav.png">
 						<p>cпециально разработанная конструкция для безопасной и качественной работы</p>
 					</div>
 					<div class="col-6 col-md-3">
-						<img src="../img/preimushestva/icon_cover.png">
+						<img src="img/preimushestva/icon_cover.png">
 						<p>уникальная конструкция крышки и дна автоклава</p>
 					</div>
 					<div class="col-6 col-md-3">
-						<img src="../img/preimushestva/icon_ruchka.png">
+						<img src="img/preimushestva/icon_ruchka.png">
 						<p>удобные ненагревающиеся ручки</p>
 					</div>
 					<div class="col-6 col-md-3">
-						<img src="../img/preimushestva/icon_casets.png">
+						<img src="img/preimushestva/icon_casets.png">
 						<p>кассеты для банок в комплекте</p>
 					</div> -->
 				</div>
@@ -837,42 +812,42 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 			<div class="container">
 				<div class="row">
 					<div class="col-6 col-md-4">
-						<img src="../img/elements/elements-1.png" class="img-responsive">
+						<img src="img/elements/elements-1.png" class="img-responsive">
 						<h3 class="title">Основной бак</h3>
 						<p>для залива и перегонки браги или спирта сырца</p>
 					</div>
 					<div class="col-6 col-md-4">
-						<img src="../img/elements/elements-2.png" class="img-responsive">
+						<img src="img/elements/elements-2.png" class="img-responsive">
 						<h3 class="title">Колонна сухопарник</h3>
 						<p>для дистилляции</p>
 					</div>
 					<div class="col-6 col-md-4">
-						<img src="../img/elements/elements-3.png" class="img-responsive">
+						<img src="img/elements/elements-3.png" class="img-responsive">
 						<h3 class="title">Электронный термометр</h3>
 						<p>для максимально точного контроля температурного режима</p>
 					</div>
 					<div class="col-6 col-md-4">
-						<img src="../img/elements/elements-4.png" class="img-responsive">
+						<img src="img/elements/elements-4.png" class="img-responsive">
 						<h3 class="title">Клапан сброса избыточного давления</h3>
 						<p>позволяет избежать превышения допустимых показателей во время использования</p>
 					</div>
 					<div class="col-6 col-md-4">
-						<img src="../img/elements/elements-8.png" class="img-responsive">
+						<img src="img/elements/elements-8.png" class="img-responsive">
 						<h3 class="title">Кран для слива</h3>
 						<p>для слива жидкости после окончания процесса перегонки</p>
 					</div>
 					<!-- <div class="col-6 col-md-4">
-						<img src="../img/elements/elements-11.png" class="img-responsive">
+						<img src="img/elements/elements-11.png" class="img-responsive">
 						<h3 class="title">Усиленные металлические ручки</h3>
 						<p>для переноса автоклава (не нагреваются)</p>
 					</div>
 					<div class="col-6 col-md-4">
-						<img src="../img/elements/elements-5.png" class="img-responsive">
+						<img src="img/elements/elements-5.png" class="img-responsive">
 						<h3 class="title">Сборник рецептов</h3>
 						<p>сборник множества рецептов, чтобы удивлять друзей и близких</p>
 					</div>
 					<div class="col-6 col-md-4">
-						<img src="../img/elements/elements-7.png" class="img-responsive">
+						<img src="img/elements/elements-7.png" class="img-responsive">
 						<h3 class="title">Кран для слива</h3>
 						<p>для слива жидкости после окончания процесса автоклавирования или перегона</p>
 					</div> -->
@@ -890,32 +865,32 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 						<p>В чистый бак заливаем брагу, крепим колонну с сухопарником, подключаем проточную воду – устройство для перегона готово!</p>
 						<div class="row">
 							<div class="col-md-6 image">
-								<img src="../img/modern/apparat_on_floor.png" class="img-responsive">
+								<img src="img/modern/apparat_on_floor.png" class="img-responsive">
 							</div>
 							<div class="col-md-6">
 								<div class="row">
 									<div class="col-6">
-										<img src="../img/modern/Mask-Group-1.png" class="img-responsive">
+										<img src="img/modern/Mask-Group-1.png" class="img-responsive">
 										Готовим брагу
 									</div>
 									<div class="col-6">
-										<img src="../img/modern/Mask-Group-2.png" class="img-responsive">
+										<img src="img/modern/Mask-Group-2.png" class="img-responsive">
 										Делаем перегон
 									</div>
 									<div class="col-6">
-										<img src="../img/modern/Mask-Group-3.png" class="img-responsive">
+										<img src="img/modern/Mask-Group-3.png" class="img-responsive">
 										По желанию очищаем промежуточный продукт
 									</div>
 									<div class="col-6">
-										<img src="../img/modern/Mask-Group-4.png" class="img-responsive">
+										<img src="img/modern/Mask-Group-4.png" class="img-responsive">
 										Разбавляем водой до нужной крепости
 									</div>
 									<div class="col-6">
-										<img src="../img/modern/Mask-Group-5.png" class="img-responsive">
+										<img src="img/modern/Mask-Group-5.png" class="img-responsive">
 										Смягчаем вкус
 									</div>
 									<div class="col-6">
-										<img src="../img/modern/Mask-Group-6.png" class="img-responsive">
+										<img src="img/modern/Mask-Group-6.png" class="img-responsive">
 										Пробуем продукт
 									</div>
 								</div>
@@ -929,9 +904,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 		<section class="function-diagram">
 			<div class="container">
 				<div class="col-12">
-					<img src="../img/modern/distillery-instruction.png" class="img-responsive img-bottom pc-bottom-modern">
-					<img src="../img/modern/distillery-instruction-1.png" class="img-responsive img-bottom mob-bottom-modern">
-					<img src="../img/modern/distillery-instruction-2.png" class="img-responsive img-bottom mob-bottom-modern">
+					<img src="img/modern/distillery-instruction.png" class="img-responsive img-bottom pc-bottom-modern">
+					<img src="img/modern/distillery-instruction-1.png" class="img-responsive img-bottom mob-bottom-modern">
+					<img src="img/modern/distillery-instruction-2.png" class="img-responsive img-bottom mob-bottom-modern">
 				</div>
 			</div>
 		</section>
@@ -944,15 +919,15 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 						<!-- <p>
 							Тушёнка, каши, соусы, компоты, варенья, рыбные консервы, грибы и прочие вкусности в автоклаве «Bondareff Eco» получаются просто и быстро. Следуя инструкции, Вы не заметите как домашние лакомства будут готовы. Всё, что нужно:
 							<br><br>
-							<img src="../img/instruction.svg" width="100%">
+							<img src="img/instruction.svg" width="100%">
 						</p> -->
 					</div>
 				</div>
 
 				<div class="row rec-row">
 					<div class="col-6 col-md-3">
-						<img src="../img/reciepts/rasolnik.png" class="img-responsive">
-						<p class="title">Классичекский самогон</p>
+						<img src="img/reciepts/rasolnik.png" class="img-responsive">
+						<p class="title">Классический самогон</p>
 						<p>Рецепт для сухопарника с емкостью 25 литров</p>
 						<button type="button" class="btn" data-toggle="modal" data-target="#rasolnik">Читать</button>
 						<div class="modal fade" id="rasolnik">
@@ -965,14 +940,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 										<div class="col-7 text">
 											<div class="content">
 												<p class="m-title">
-													Классичекский самогон
+													Классический самогон
 												</p>
 												<div class="content">
 													Сахар – 4 кг. <br>
 													Вода – 16 л. <br>
 													Дрожжи Coobra 48 Extreme – ½ уп. <br>
 													<br>
-													Расстоворяем сахар в воде 22-30 градусов и добавляем дрожжи.
+													Растворяем сахар в воде 22-30 градусов и добавляем дрожжи.
 													Процесс брожения длится 2-3 дня. Проверяем готовность на вкус - если брага имеет сладковатый привкус - значит она еще не выбродила, а если брага имеет нейтральный вкус или горчит - готова к перегонке.<br>
 													<br>
 													1 кг сахара даёт около 50 мл «голов», значит мы отбираем 50 мл х 4 кг сахара = 200 мл. Тело отбираем до крепости в струе 40-45 градусов или температуре в перегонном кубе 92 градуса.<br>
@@ -988,7 +963,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 						</div>
 					</div>
 					<div class="col-6 col-md-3">
-						<img src="../img/reciepts/kasha.png" class="img-responsive">
+						<img src="img/reciepts/kasha.png" class="img-responsive">
 						<p class="title">Перцовка</p>
 						<p>Рецепт для сухопарника с емкостью 25 литров</p>
 						<button type="button" class="btn" data-toggle="modal" data-target="#kasha">Читать</button>
@@ -1011,7 +986,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 													Мед – 1 ст. ложка. <br>
 													Перец – 1-2 стручка. <br>
 													<br>
-													Расстоворяем сахар в воде 22-30 градусов и добавляем дрожжи.
+													Растворяем сахар в воде 22-30 градусов и добавляем дрожжи.
 													Процесс брожения длится 2-3 дня. Проверяем готовность на вкус - если брага имеет сладковатый привкус - значит она еще не выбродила, а если брага имеет нейтральный вкус или горчит - готова к перегонке.<br>
 													<br>
 													1 кг сахара даёт около 50 мл «голов», значит мы отбираем 50 мл х 4 кг сахара = 200 мл. Тело отбираем до крепости в струе 40-45 градусов или температуре в перегонном кубе 92 градуса.<br>
@@ -1030,7 +1005,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 						</div>
 					</div>
 					<div class="col-6 col-md-3">
-						<img src="../img/reciepts/tushenka.png" class="img-responsive">
+						<img src="img/reciepts/tushenka.png" class="img-responsive">
 						<p class="title">Хреновуха</p>
 						<p>Рецепт для сухопарника с емкостью 25 литров</p>
 						<button type="button" class="btn" data-toggle="modal" data-target="#tushenka">Читать</button>
@@ -1053,7 +1028,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 													Мед – 1 ст. ложка. <br>
 													Хрен – 10-15 см. <br>
 													<br>
-													Расстоворяем сахар в воде 22-30 градусов и добавляем дрожжи.
+													Растворяем сахар в воде 22-30 градусов и добавляем дрожжи.
 													Процесс брожения длится 2-3 дня. Проверяем готовность на вкус - если брага имеет сладковатый привкус - значит она еще не выбродила, а если брага имеет нейтральный вкус или горчит - готова к перегонке.<br>
 													<br>
 													1 кг сахара даёт около 50 мл «голов», значит мы отбираем 50 мл х 4 кг сахара = 200 мл. Тело отбираем до крепости в струе 40-45 градусов или температуре в перегонном кубе 92 градуса.<br>
@@ -1072,7 +1047,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 						</div>
 					</div>
 					<div class="col-6 col-md-3">
-						<img src="../img/reciepts/gulyash.png" class="img-responsive">
+						<img src="img/reciepts/gulyash.png" class="img-responsive">
 						<p class="title">Зубровка</p>
 						<p>Рецепт для сухопарника с емкостью 25 литров</p>
 						<button type="button" class="btn" data-toggle="modal" data-target="#gulyash">Читать</button>
@@ -1095,7 +1070,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 													Мед – 1 ст. ложка. <br>
 													Зубровка – 5-6 травинок. <br>
 													<br>
-													Расстоворяем сахар в воде 22-30 градусов и добавляем дрожжи.
+													Растворяем сахар в воде 22-30 градусов и добавляем дрожжи.
 													Процесс брожения длится 2-3 дня. Проверяем готовность на вкус - если брага имеет сладковатый привкус - значит она еще не выбродила, а если брага имеет нейтральный вкус или горчит - готова к перегонке.<br>
 													<br>
 													1 кг сахара даёт около 50 мл «голов», значит мы отбираем 50 мл х 4 кг сахара = 200 мл. Тело отбираем до крепости в струе 40-45 градусов или температуре в перегонном кубе 92 градуса.<br>
@@ -1125,9 +1100,26 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 							Живой вкус за одну перегонку!
 						</h2>
 						<div class="video_wr">
-							<div class="thumb-wrap">
-								<iframe src="https://www.youtube.com/embed/gkQWs4p0aUA" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+
+							<div class="video">
+								<a class="video__link" href="https://youtu.be/gkQWs4p0aUA">
+									<picture>
+										<source srcset="https://i.ytimg.com/vi_webp/gkQWs4p0aUA/maxresdefault.webp" type="image/webp">
+										<img class="video__media" src="https://i.ytimg.com/vi/gkQWs4p0aUA/maxresdefault.jpg" alt="Обзор самогонного аппарата AquaGradus Стандарт">
+									</picture>
+								</a>
+								<button class="video__button" aria-label="Запустить видео">
+									<svg width="68" height="48" viewBox="0 0 68 48">
+										<path class="video__button-shape" d="M66.52,7.74c-0.78-2.93-2.49-5.41-5.42-6.19C55.79,.13,34,0,34,0S12.21,.13,6.9,1.55 C3.97,2.33,2.27,4.81,1.48,7.74C0.06,13.05,0,24,0,24s0.06,10.95,1.48,16.26c0.78,2.93,2.49,5.41,5.42,6.19 C12.21,47.87,34,48,34,48s21.79-0.13,27.1-1.55c2.93-0.78,4.64-3.26,5.42-6.19C67.94,34.95,68,24,68,24S67.94,13.05,66.52,7.74z"></path>
+										<path class="video__button-icon" d="M 45,24 27,14 27,34"></path>
+									</svg>
+								</button>
 							</div>
+
+							<!-- <div class="thumb-wrap">
+								<iframe src="https://www.youtube.com/embed/gkQWs4p0aUA" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+							</div> -->
+
 						</div>
 					</div>
 				</div>
@@ -1138,7 +1130,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 			<div class="container">
 				<div class="row">
 					<div class="col-md-4 nalogka">
-						<img src="../img/nalog.png" alt="Самогонный аппарат с сухопарником КОЗАЧОК" class="img-responsive">
+						<img src="img/nalog.png" alt="Самогонный аппарат с сухопарником КОЗАЧОК" class="img-responsive">
 						<h3>Оплата товара при получении</h3>
 						<p>Самогонный аппарат доставляется до получателя наложенным платежом. Никаких предоплат, Вы оплачиваете заказ только после его получения!</p>
 					</div>
@@ -1148,7 +1140,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 					<div class="col-md-5 form-block order-md-1">
 						<h2>
 							Заказывайте самогонный аппарат <span class="sale">Козачок</span> -
-							Получай подарки и скидку 600 грн!
+							Получай подарки и скидку 1000 грн!
 						</h2>
 						<form class="sup-form" method="post" id="akciyaForm2">
 							<p class="cta">Очистка от голов и сивушных масел сухопарником</p>
@@ -1167,7 +1159,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 								<div class="col-md-6 price">
 									<!-- <span class="oldprice">3890 </span> -->
 									<!-- <span class="newprice">3290</span> грн. -->
-									<span class="newprice">от 2990</span> грн.
+									<span class="newprice">от 3490</span> грн.
 								</div>
 								<div class="col-md-6 main-btn">
 									<button class="btn" type="submit">Заказать</button>
@@ -1194,12 +1186,25 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 						</p>
 						<div class="row justify-content-center">
 							<div class="col-md-8 video_wr">
-								<div class="thumb-wrap">
-									<iframe width="560" height="315" src="https://www.youtube.com/embed/J4hHh8Qp55M" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+
+								<div class="video">
+									<a class="video__link" href="https://youtu.be/J4hHh8Qp55M">
+										<picture>
+											<source srcset="https://i.ytimg.com/vi_webp/J4hHh8Qp55M/maxresdefault.webp" type="image/webp">
+											<img class="video__media" src="https://i.ytimg.com/vi/J4hHh8Qp55M/maxresdefault.jpg" alt="Завод AquaGradus">
+										</picture>
+									</a>
+									<button class="video__button" aria-label="Запустить видео">
+										<svg width="68" height="48" viewBox="0 0 68 48">
+											<path class="video__button-shape" d="M66.52,7.74c-0.78-2.93-2.49-5.41-5.42-6.19C55.79,.13,34,0,34,0S12.21,.13,6.9,1.55 C3.97,2.33,2.27,4.81,1.48,7.74C0.06,13.05,0,24,0,24s0.06,10.95,1.48,16.26c0.78,2.93,2.49,5.41,5.42,6.19 C12.21,47.87,34,48,34,48s21.79-0.13,27.1-1.55c2.93-0.78,4.64-3.26,5.42-6.19C67.94,34.95,68,24,68,24S67.94,13.05,66.52,7.74z"></path>
+											<path class="video__button-icon" d="M 45,24 27,14 27,34"></path>
+										</svg>
+									</button>
 								</div>
+								
 							</div>	
 						</div>
-						<img src="../img/rezka.png" class="img-responsive">
+						<img src="img/rezka.png" class="img-responsive">
 					</div>
 				</div>
 			</div>
@@ -1213,7 +1218,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 						<p>Быстрая доставка в любой населённый пункт Украины. После оформления заказа наш менеджер свяжется с вами в течение 10 минут для уточнения адреса и времени доставки.</p>
 					</div>
 					<div class="col-md-4 img order-md-1">
-						<img src="../img/courier_mirror.png" alt="Самогонный аппарат с сухопарником КОЗАЧОК" class="img-responsive">
+						<img src="img/courier_mirror.png" alt="Самогонный аппарат с сухопарником КОЗАЧОК" class="img-responsive">
 					</div>
 					<div class="col-md-4 text-left order-md-2">
 						<p class="title">Способы оплаты:</p>
@@ -1222,7 +1227,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 						</ul>
 						<p class="title">Стоимость доставки:</p>
 						<ul>
-							<li>От 100 грн. Сегодня действует акция, для фиксирование доставки звоните по номерам:</li>
+							<li>От 100 грн. Сегодня действует акция, для фиксирование доставки звоните по номеру:</li>
 						</ul>
 						<!-- <a href="tel:+380500111963" class="callibri_phone">+38 (050) 011-19-63</a><br> -->
 						<a href="tel:+380677596326" class="callibri_phone">+38 (067) 759-63-26</a>
@@ -1234,7 +1239,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 							<li>в ближайшее отделение</li>
 							<li>курьерской службой</li>
 						</ul>
-						<img src="../img/postlogo.png" class="img-responsive">
+						<img src="img/postlogo.png" class="img-responsive">
 						<p class="title">Гарантии:</p>
 						<ul>
 							<li>100% гарантия на возврат денежных средств или обмен товара в течение 2-х недель со дня продажи (если товар вам не подошёл по каким-то причинам).</li>
@@ -1282,7 +1287,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-3">
-					<a href="#main"><img src="../img/footer/logof.png" class="img-responsive footer-logo"></a>
+					<a href="#main"><img src="img/footer/logof.png" class="img-responsive footer-logo"></a>
 				</div>
 				<div class="col-lg-9">
 					<div class="row">
@@ -1301,17 +1306,17 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 						<div class="col-lg-6 f-cont">
 							<p class="title">Контакты:</p>
 							<p class="addr">
-								<img src="../img/footer/icon-tel.png" class="img-responsive f-cont-img">
+								<img src="img/footer/icon-tel.png" class="img-responsive f-cont-img">
 								Бесплатно:<br>
 								<!-- <a href="tel:+380500111963" class="callibri_phone">+38 (050) 011-19-63</a><br> -->
 								<a href="tel:+380677596326" class="callibri_phone">+38 (067) 759-63-26</a>
 							</p>
 							<p class="addr">
-								<img src="../img/footer/icon-mail.png" class="img-responsive f-cont-img">
+								<img src="img/footer/icon-mail.png" class="img-responsive f-cont-img">
 								<a href="mailto:official.bondareff@gmail.com">E-mail: aquagradus@gmail.com</a>
 							</p>
 							<p class="addr">
-								<img src="../img/footer/icon-mycall.png" class="img-responsive f-cont-img">
+								<img src="img/footer/icon-mycall.png" class="img-responsive f-cont-img">
 								<a href="#" class="callme" data-toggle="modal" data-target="#f-call">Обратный звонок</a>
 							</p>
 						</div>
@@ -1359,7 +1364,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 	<script src="js/scripts.min.js"></script>
 
 	<!-- Bitrix -->
-	<script>
+	<script defer>
 		(function(w,d,u){
 			var s=d.createElement('script');s.async=true;s.src=u+'?'+(Date.now()/60000|0);
 			var h=d.getElementsByTagName('script')[0];h.parentNode.insertBefore(s,h);

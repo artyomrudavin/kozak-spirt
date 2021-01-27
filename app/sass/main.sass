@@ -58,7 +58,7 @@ textarea
 		width: 100%
 
 .kozak
-	font-family: ancientkyiv
+	font-family: $logo-font
 
 .text-center
 	text-align: center
@@ -101,28 +101,28 @@ a
 
 /* BlackFriday Banner Start */
 
-.banner
-	display: none
+// .banner
+// 	display: none
 
-.banner, .bannerm
-	margin: 0
-	padding: 0
-	text-align: center
-	a
-		text-decoration: none
-		display: block
-		background: #d9172f
-		height: 60px
-		width: 100%
-		img
-			display: block
-			max-width: 1316px
-			margin: 0 auto
-			width: 100%
+// .banner, .bannerm
+// 	margin: 0
+// 	padding: 0
+// 	text-align: center
+// 	a
+// 		text-decoration: none
+// 		display: block
+// 		background: #d9172f
+// 		height: 60px
+// 		width: 100%
+// 		img
+// 			display: block
+// 			max-width: 1316px
+// 			margin: 0 auto
+// 			width: 100%
 
-.bannerm
-	a
-		height: auto
+// .bannerm
+// 	a
+// 		height: auto
 
 /* BlackFriday Banner End */
 
@@ -136,21 +136,46 @@ header
 	box-shadow: 0 0 rem(10) #ccc
 	.container
 		.row
-			nav
-				#menu
-					display: none
+			.col-12
+				nav
+					#menu
+						display: none
+						flex-direction: column
+						justify-content: center
+						text-align: center
+						margin: 0
+						border-top: rem(1) solid #ccc
+						padding: 0
+						li
+							list-style: none
+							a
+								padding: rem(15) rem(15)
+								&:hover
+									text-decoration: underline
+			.local-desc
+				display: none
+				position: absolute
+				top: rem(10)
+				right: rem(15)
+				flex: 0 1 auto
+				.lang__control
+					display: flex
 					flex-direction: column
-					justify-content: center
-					text-align: center
-					margin: 0
-					border-top: rem(1) solid #ccc
 					padding: 0
+					margin: 0
 					li
 						list-style: none
 						a
-							padding: rem(15) rem(15)
+							display: block
+							font-size: rem(14)
+							padding: rem(3) rem(6)
+							background-color: #ccc
+							color: #fff
+							transition: .4s
 							&:hover
-								text-decoration: underline
+								background-color: #9e0c36
+						.lang-active
+							background-color: #9e0c36
 		.row
 			.main-header
 					display: flex
@@ -194,15 +219,40 @@ header
 						font-size: rem(14)
 						text-align: right
 						flex: 1 0 auto
+						padding-top: rem(10)
 						a
 							font-size: rem(16)
 							line-height: rem(16)
-							font-weight: bol		
+							font-weight: bold		
 		.mob-call
 			justify-content: center
 			margin-bottom: rem(10)
 			.btn
 				padding: rem(5) rem(25)
+			.local-mob
+				position: absolute
+				bottom: rem(10)
+				right: rem(15)
+				flex: 0 1 auto
+				.lang__control
+					display: flex
+					flex-direction: column
+					padding: 0
+					margin: 0
+					li
+						list-style: none
+						a
+							display: block
+							font-size: rem(14)
+							padding: rem(3) rem(6)
+							background-color: #ccc
+							color: #fff
+							transition: .4s
+							&:hover
+								background-color: #9e0c36
+						.lang-active
+							background-color: #9e0c36
+
 
 .main
 	background: url(../img/main2.jpg) center center/cover no-repeat
@@ -255,10 +305,34 @@ header
 					font-size: rem(14)
 					text-align: right
 					margin-top: rem(10)
+					margin-right: rem(25)
 					a
 						font-size: rem(16)
 						line-height: rem(20)
 						font-weight: bold
+				.local-main
+					position: absolute
+					top: rem(10)
+					right: 0
+					flex: 0 1 auto
+					.lang__control
+						display: flex
+						flex-direction: column
+						padding: 0
+						margin: 0
+						li
+							list-style: none
+							a
+								display: block
+								font-size: rem(14)
+								padding: rem(3) rem(6)
+								background-color: #ccc
+								color: #fff
+								transition: .4s
+								&:hover
+									background-color: #9e0c36
+							.lang-active
+								background-color: #9e0c36
 			.video-order
 				display: flex
 				flex-direction: column
@@ -283,21 +357,65 @@ header
 								overflow: hidden
 								.modal-v
 									justify-content: center
-									height: rem(449)
-									.video_wr
-										.thumb-wrap
-											// position: relative
-											padding-bottom: 56.25%
-											padding-top: rem(30)
-											height: 0
-											overflow: hidden
-											text-align: center
-											iframe
-												position: absolute
-												top: 0
-												left: 0
-												width: 100%
-												height: 100%
+									// height: rem(449)
+									.video
+										position: relative
+										width: 100%
+										height: 0
+										padding-bottom: 56.25%
+										border-radius: 16px
+										overflow: hidden
+										&:hover
+											.video__button
+												.video__button-shape
+													fill: #ff0000
+													fill-opacity: 1
+										.video__media
+											position: absolute
+											top: 0
+											left: 0
+											width: 100%
+											height: 100%
+											border: 0
+										.video__button
+											position: absolute
+											top: 50%
+											left: 50%
+											padding: 0
+											width: rem(68)
+											height: rem(48)
+											border: none
+											background-color: transparent
+											transform: translate(-50%,-50%)
+											outline: none
+											display: none
+											.video__button-shape
+												fill: #212121
+												fill-opacity: .8
+											.video__button-icon
+												fill: #fff
+											&:focus
+												.video__button-shape
+													fill: #ff0000
+													fill-opacity: 1
+									.video--enabled
+										cursor: pointer
+										.video__button
+											display: block
+									// .video_wr
+									// 	.thumb-wrap
+									// 		// position: relative
+									// 		padding-bottom: 56.25%
+									// 		padding-top: rem(30)
+									// 		height: 0
+									// 		overflow: hidden
+									// 		text-align: center
+									// 		iframe
+									// 			position: absolute
+									// 			top: 0
+									// 			left: 0
+									// 			width: 100%
+									// 			height: 100%
 			.main-order
 				h1
 					text-align: center
@@ -305,7 +423,7 @@ header
 					span
 						font-size: rem(22)
 					.sale, .sale span
-						font-family: ancientkyiv
+						font-family: $logo-font
 						font-size: rem(36)
 						font-weight: normal
 						line-height: normal
@@ -355,20 +473,19 @@ header
 					.price-block
 						margin-bottom: rem(20)
 						.price
-							// height: rem(50)
 							height: 100%
-							line-height: rem(50)
+							line-height: 38px
 							text-align: center
 							margin-bottom: rem(10)
-							font-size: rem(36)
+							font-size: 26px
 							color: #CA1020
 							.oldprice
-								font-size: rem(36)
+								font-size: 26px
 								text-decoration: line-through
 								text-decoration-color: #000
 								color: #444
 							.newprice
-								font-size: rem(50)
+								font-size: 38px
 						.main-btn
 							.btn
 								background: #008D37 url(../img/shoping.png) rem(24) center / rem(24) rem(24) no-repeat
@@ -488,7 +605,7 @@ header
 					.kozak
 						color: black
 						font-size: rem(70)
-						font-family: ancientkyiv
+						font-family: $logo-font
 				p
 					font-size: rem(20)
 					text-align: center
@@ -621,27 +738,71 @@ header
 
 // Catalog End
 
-.video
+.video-block
 	background: url(../img/sub-order-1.jpg) 60% 50%/cover no-repeat
 	padding: rem(20) 0 rem(20) 0
 	background-attachment: fixed
 	.container-fluid
 		max-width: rem(1240)
 		.row
-			.video_wr
-				.thumb-wrap
+			.col-md-7
+				.video
 					position: relative
-					padding-bottom: 56.25%
-					padding-top: rem(30)
+					width: 100%
 					height: 0
+					padding-bottom: 56.25%
+					border-radius: 16px
 					overflow: hidden
-					text-align: center
-					iframe
+					&:hover
+						.video__button
+							.video__button-shape
+								fill: #ff0000
+								fill-opacity: 1
+					.video__media
 						position: absolute
 						top: 0
 						left: 0
 						width: 100%
 						height: 100%
+						border: 0
+					.video__button
+						position: absolute
+						top: 50%
+						left: 50%
+						padding: 0
+						width: rem(68)
+						height: rem(48)
+						border: none
+						background-color: transparent
+						transform: translate(-50%,-50%)
+						outline: none
+						display: none
+						.video__button-shape
+							fill: #212121
+							fill-opacity: .8
+						.video__button-icon
+							fill: #fff
+						&:focus
+							.video__button-shape
+								fill: #ff0000
+								fill-opacity: 1
+				.video--enabled
+					cursor: pointer
+					.video__button
+						display: block
+				// .thumb-wrap
+				// 	position: relative
+				// 	padding-bottom: 56.25%
+				// 	padding-top: rem(30)
+				// 	height: 0
+				// 	overflow: hidden
+				// 	text-align: center
+				// 	iframe
+				// 		position: absolute
+				// 		top: 0
+				// 		left: 0
+				// 		width: 100%
+				// 		height: 100%
 			.video_text
 				display: flex
 				flex-direction: column
@@ -652,7 +813,7 @@ header
 					text-shadow: rem(1) rem(1) rem(5) #000
 					line-height: normal
 					.sale, .sale span
-						font-family: ancientkyiv
+						font-family: $logo-font
 						color: #CA1020
 						font-size: rem(38)
 						font-weight: normal
@@ -662,52 +823,52 @@ header
 
 /* Blackfriday Start */
 
-.blackfriday
-	// padding: rem(30) rem(30)
-	// background: url(../img/right.jpg) center left no-repeat, url(../img/left.jpg) center right no-repeat, #ffc801
-	background-color: #009d4b
-	// background-size: contain
-	// background: url(../img/chrismas.jpg) repeat
-	.container
-		.bf-row
-			flex-direction: column
-			.bf-img-block
-				// width: 50%
-			.bf-text-block
-				// width: 50%
-				color: #fff
-				text-align: center
-				display: flex
-				flex-direction: column
-				justify-content: center
-				align-items: center
-				.aqua, .small-h
-					color: #000
-					font-size: 38px
-					line-height: 38px
-					font-weight: bold
-				.aqua
-					color: #c01926
-					margin-bottom: rem(20)
-					.logo-font
-						font-size: 42px
-				.img-responsive
-					margin: 0 auto
-				.small-h
-				.bf-adds
-					font-size: 18px
-					margin-bottom: rem(30)
-					color: #000
-				.buy
-					padding: rem(15) rem(30)
-					min-width: rem(270)
-					margin: rem(5)
-				.bf-btn
-					background-color: #c01926
-					// max-width: rem(200)
-					padding: rem(15) rem(30)
-					min-width: rem(270)
-					margin: rem(5)
+// .blackfriday
+// 	// padding: rem(30) rem(30)
+// 	// background: url(../img/right.jpg) center left no-repeat, url(../img/left.jpg) center right no-repeat, #ffc801
+// 	background-color: #009d4b
+// 	// background-size: contain
+// 	// background: url(../img/chrismas.jpg) repeat
+// 	.container
+// 		.bf-row
+// 			flex-direction: column
+// 			.bf-img-block
+// 				// width: 50%
+// 			.bf-text-block
+// 				// width: 50%
+// 				color: #fff
+// 				text-align: center
+// 				display: flex
+// 				flex-direction: column
+// 				justify-content: center
+// 				align-items: center
+// 				.aqua, .small-h
+// 					color: #000
+// 					font-size: 38px
+// 					line-height: 38px
+// 					font-weight: bold
+// 				.aqua
+// 					color: #c01926
+// 					margin-bottom: rem(20)
+// 					.logo-font
+// 						font-size: 42px
+// 				.img-responsive
+// 					margin: 0 auto
+// 				.small-h
+// 				.bf-adds
+// 					font-size: 18px
+// 					margin-bottom: rem(30)
+// 					color: #000
+// 				.buy
+// 					padding: rem(15) rem(30)
+// 					min-width: rem(270)
+// 					margin: rem(5)
+// 				.bf-btn
+// 					background-color: #c01926
+// 					// max-width: rem(200)
+// 					padding: rem(15) rem(30)
+// 					min-width: rem(270)
+// 					margin: rem(5)
 
 /* Blackfriday End */
 
@@ -725,7 +886,7 @@ header
 					font-weight: normal
 					.sale, .sale span
 						font-size: rem(38)
-						font-family: ancientkyiv
+						font-family: $logo-font
 						font-weight: normal
 						line-height: normal
 					.sale
@@ -796,7 +957,7 @@ header
 					font-weight: normal
 					.sale, .sale span
 						font-size: rem(40)
-						font-family: ancientkyiv
+						font-family: $logo-font
 						font-weight: normal
 						line-height: normal
 					.sale
@@ -867,7 +1028,7 @@ header
 					font-weight: normal
 					.sale, .sale span
 						font-size: rem(38)
-						font-family: ancientkyiv
+						font-family: $logo-font
 						font-weight: normal
 						line-height: normal
 					.sale
@@ -1100,20 +1261,65 @@ header
 				.video_wr
 					max-width: rem(900)
 					margin: 0 auto
-					.thumb-wrap
+					.video
 						position: relative
-						padding-bottom: 56.25%
-						// padding-top: rem(30)
+						width: 100%
 						height: 0
-						overflow: hidden
+						padding-bottom: 56.25%
 						text-align: center
 						border-radius: 16px
-						iframe
+						overflow: hidden
+						&:hover
+							.video__button
+								.video__button-shape
+									fill: #ff0000
+									fill-opacity: 1
+						.video__media
 							position: absolute
 							top: 0
 							left: 0
 							width: 100%
 							height: 100%
+							border: 0
+						.video__button
+							position: absolute
+							top: 50%
+							left: 50%
+							padding: 0
+							width: rem(68)
+							height: rem(48)
+							border: none
+							background-color: transparent
+							transform: translate(-50%,-50%)
+							outline: none
+							display: none
+							.video__button-shape
+								fill: #212121
+								fill-opacity: .8
+							.video__button-icon
+								fill: #fff
+							&:focus
+								.video__button-shape
+									fill: #ff0000
+									fill-opacity: 1
+					.video--enabled
+						cursor: pointer
+						.video__button
+							display: block
+					// .thumb-wrap
+					// 	position: relative
+					// 	padding-bottom: 56.25%
+					// 	// padding-top: rem(30)
+					// 	height: 0
+					// 	overflow: hidden
+					// 	text-align: center
+					// 	border-radius: 16px
+					// 	iframe
+					// 		position: absolute
+					// 		top: 0
+					// 		left: 0
+					// 		width: 100%
+					// 		height: 100%
 
 // Video-recept End
 
@@ -1132,7 +1338,7 @@ header
 				color: #fff
 				.sale, .sale span
 					font-size: rem(38)
-					font-family: ancientkyiv
+					font-family: $logo-font
 					font-weight: normal
 					line-height: normal
 					color: #CA1020
@@ -1204,26 +1410,71 @@ header
 					line-height: normal
 					.sale, .sale span
 						font-size: rem(30)
-						font-family: ancientkyiv
+						font-family: $logo-font
 						font-weight: normal
 						line-height: normal
 				p
 					font-size: rem(18)
 					line-height: normal
 				.video_wr
-					.thumb-wrap
+					.video
 						position: relative
-						padding-bottom: 56.25%
-						padding-top: rem(30)
+						width: 100%
 						height: 0
-						overflow: hidden
+						padding-bottom: 56.25%
 						text-align: center
-						iframe
+						border-radius: 16px
+						overflow: hidden
+						&:hover
+							.video__button
+								.video__button-shape
+									fill: #ff0000
+									fill-opacity: 1
+						.video__media
 							position: absolute
 							top: 0
 							left: 0
 							width: 100%
 							height: 100%
+							border: 0
+						.video__button
+							position: absolute
+							top: 50%
+							left: 50%
+							padding: 0
+							width: rem(68)
+							height: rem(48)
+							border: none
+							background-color: transparent
+							transform: translate(-50%,-50%)
+							outline: none
+							display: none
+							.video__button-shape
+								fill: #212121
+								fill-opacity: .8
+							.video__button-icon
+								fill: #fff
+							&:focus
+								.video__button-shape
+									fill: #ff0000
+									fill-opacity: 1
+					.video--enabled
+						cursor: pointer
+						.video__button
+							display: block
+					// .thumb-wrap
+					// 	position: relative
+					// 	padding-bottom: 56.25%
+					// 	padding-top: rem(30)
+					// 	height: 0
+					// 	overflow: hidden
+					// 	text-align: center
+					// 	iframe
+					// 		position: absolute
+					// 		top: 0
+					// 		left: 0
+					// 		width: 100%
+					// 		height: 100%
 
 // Zavod End
 
